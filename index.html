@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="HandheldFriendly" content="true" />
+		<title>Kavya | Home</title>
+
+		<!-- favicon -->
+		<link rel="icon" href="girl.png" />
+
+		<!-- font-awesome icon cdn -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- animate.css cdn -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+
+		<!-- css stylesheet -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<nav>
+			<div id="hamburger" class="visible">
+				<i class="fas fa-bars"></i>
+			</div>
+			<div id="close" class="hidden">
+				<i class="fas fa-times"></i>
+			</div>
+
+			<menu>
+				<a href="index.html" class="inactive"
+					><i class="fas fa-home"></i> HOME</a
+				>
+				<a href="profile.html" class="inactive">PROFILE</a>
+			</menu>
+		</nav>
+
+		<main class="homepage">
+			<!-- social media links section starts -->
+			<section class="connect">
+				<div class="scroll-down"></div>
+
+				<div class="icon">
+					<a href="https://www.instagram.com/wakandevforever/" target="_blank"><i class="fab fa-instagram" target="_blank"></i></a>
+					
+				</div>
+
+				<div class="icon">
+					<a href="https://github.com/kavya-sivaguru" target="_blank"><i class="fab fa-github-alt"></i></a>
+					
+				</div>
+
+				<div class="icon">
+					<a href="https://www.linkedin.com/in/kavya-sivagurunathan-1bb810161/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+					
+				</div>
+
+				<div class="scroll-down"></div>
+			</section>
+			<!-- social media links section ends -->
+
+			<!-- page content section starts -->
+			<section class="content">
+				<h3>Kavya Sivagurunathan</h3>
+
+				<h1 class="animate__animated animate__fadeInDownBig" id="intro">
+					FULL STACK DEVELOPER
+				</h1>
+
+				<p>I code beautifully simple things, and I love what I do</p>
+
+				<button id="resume" class="animate__animated animate__flipInX">
+					RESUME &DownArrowBar;
+				</button>
+			</section>
+			<!-- page content section ends -->
+		</main>
+
+		<script src="particles.js"></script>
+		<script src="app.js"></script>
+		<script>
+			var toggleopen = function () {
+				close.classList.replace("hidden", "visible");
+				menu.classList.replace("visible", "hidden");
+				var navitems = document.getElementsByClassName("inactive");
+				for (var i = 0; i < navitems.length; i += 0) {
+					navitems[i].classList.replace("inactive", "active");
+				}
+			};
+			var toggleclose = function () {
+				menu.classList.replace("hidden", "visible");
+				close.classList.replace("visible", "hidden");
+				var navitems = document.getElementsByClassName("active");
+				for (var i = 0; i < navitems.length; i += 0) {
+					navitems[i].classList.replace("active", "inactive");
+				}
+			};
+			var close = document.getElementById("close");
+			var menu = document.getElementById("hamburger");
+
+			menu.addEventListener("click", toggleopen);
+			close.addEventListener("click", toggleclose);
+		</script>
+	</body>
+</html>
